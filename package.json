@@ -11,7 +11,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
-    "emotion": "^10.0.14",
     "express": "^4.17.1",
     "razzle": "^3.0.0",
     "react": "^16.9.0",
