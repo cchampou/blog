@@ -4,12 +4,11 @@ services:
     image: registry.cchampou.me/blog:latest
     build: .
     restart: always
-    deploy:
-      replicas: 5
     labels:
       - "traefik.frontend.rule=Host:blog.cchampou.me"
       - "traefik.backend.port=3000"
       - "traefik.enable=true"
+      - "traefik.docker.network=layko_layko_net"
 
 networks:
   default:
