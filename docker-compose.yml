@@ -1,0 +1,11 @@
+version: '3'
+services:
+  production:
+    image: registry.cchampou.me/blog:latest
+    build: .
+    restart: always
+
+networks:
+  default:
+    external:
+      name: layko_net
