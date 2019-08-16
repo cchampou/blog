@@ -2,12 +2,6 @@ kind: pipeline
 name: default
 
 steps:
-  - name: build
-    image: node
-    commands:
-      - yarn
-      - yarn build
-
   - name: build & delpoy
     image: docker/compose:1.24.1
     volumes:
