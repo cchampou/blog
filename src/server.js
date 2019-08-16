@@ -2,6 +2,7 @@ import App from './App';
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import express from 'express';
+import compression from 'compression';
 import { renderToString } from 'react-dom/server';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
@@ -10,6 +11,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .use(compression())
   .get('/*', (req, res) => {
     const context = {};
     const markup = renderToString(
