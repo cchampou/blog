@@ -5,7 +5,7 @@ import express from 'express';
 import { renderToString } from 'react-dom/server';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
-
+console.log(process.env.RAZZLE_PUBLIC_DIR);
 const server = express();
 server
   .disable('x-powered-by')
