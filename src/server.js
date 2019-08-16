@@ -31,6 +31,7 @@ server
         <meta charset="utf-8" />
         <title>the Layko project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="This is my personnal blog, where I expose my different works on tech subjects.">
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`
