@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     labels:
-      - "traefik.frontend.rule=Host:blog.cchampou.me"
+      - "traefik.frontend.rule=Host:test.cchampou.me"
       - "traefik.backend.port=3000"
       - "traefik.enable=true"
       - "traefik.docker.network=layko_layko_net"
