@@ -5,12 +5,15 @@ import { Global, css } from '@emotion/core';
 import Header from './header/Header';
 import Home from './Home';
 import About from './About';
+import Footer from './footer/Footer';
 
 const globalStyles = css`
-  body, h1 {
+  body, h1, #root {
     font-family: sans-serif;
     font-weight: lighter;
     margin: 0;
+    min-height: calc(100vh - 1.5rem);
+    position: relative;
   }
   
   a {
@@ -29,6 +32,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
     </Switch>
+    <Footer/>
   </>
 );
 

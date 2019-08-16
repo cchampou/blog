@@ -15,11 +15,18 @@ const HeaderWrapper = styled('div')`
   }
 `;
 
+const RightLinksWrapper = styled('div')`
+  height: 3rem;
+  diplay: flex;
+`;
+
 const Header = () => (
   <HeaderWrapper>
     <h1>the Layko project</h1>
-    <Link to="/">Home</Link>
-    <Link to="/about">A propos</Link>
+    <RightLinksWrapper>
+      <Link to="/">Home</Link>
+      <Link to="/about">A propos</Link>
+    </RightLinksWrapper>
   </HeaderWrapper>
 );
 
