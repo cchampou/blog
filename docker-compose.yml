@@ -6,6 +6,8 @@ services:
     restart: always
     ports:
       - 3000:3000
+    deploy:
+      replicas: 5
     labels:
       - "traefik.frontend.rule=Host:blog.cchampou.me"
       - "traefik.backend.port=3000"
