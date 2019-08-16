@@ -25,9 +25,9 @@ server
     } else {
       res.status(200).send(
         `<!doctype html>
-    <html lang="">
+    <html lang="fr">
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" lang="fr" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
         <title>the Layko project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
