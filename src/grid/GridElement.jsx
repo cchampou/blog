@@ -13,7 +13,6 @@ const Img = styled('div')`
 
 const Wrapper = styled('div')`
   flex: 0;
-  width: calc(33.3% - 40px);
   margin: 20px;
   text-align: center;
   paddin-bottom: 2rem;
