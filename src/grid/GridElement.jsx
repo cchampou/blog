@@ -7,8 +7,11 @@ const Img = styled('div')`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: calc(10rem + 0.15rem * ${({ multiplier }) => multiplier});
   margin-bottom: 20px;
+  height: calc(10rem + 0.15rem * ${({ multiplier }) => multiplier});
+  @media (max-width: 800px) {
+    height: calc(5rem + 0.15rem * ${({ multiplier }) => multiplier});
+  }
 `;
 
 const Wrapper = styled('div')`

@@ -8,6 +8,7 @@ const Wrapper = styled('div')`
   display: flex;
   width: calc(100% + 10px);
   margin: -5px;
+  overflow-x: hidden;
 `;
 
 const PosterList = () => (

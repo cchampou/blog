@@ -2,6 +2,9 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Global, css } from '@emotion/core';
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 import './i18n';
 
 import Header from './header/Header';
