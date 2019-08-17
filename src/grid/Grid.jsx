@@ -11,14 +11,23 @@ const GridColumn = styled('div')`
   overflow: hidden;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  @media (max-width: 600px) {
+    &:nth-child(2) {
+      visibility: collapse;
+    }
+  }
+  @media (max-width: 800px) {
+    &:nth-child(3) {
+      visibility: collapse;
+    }
+  }
 `;
 
 const Wrapper = styled('div')`
   display: flex;
   margin: auto;
   margin-top: 4rem;
-  width: 80vw;
+  max-width: 60rem;
 `;
 
 const Grid = () => (
