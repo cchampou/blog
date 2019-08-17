@@ -10,11 +10,11 @@ const Wrapper = styled('div')`
   background-image: url("${({ background }) => background}");
   background-size: cover;
   background-position: center;
-  flex: 1;
+  flex: 1 0 10rem;
   margin: 3px;
   padding: 1rem;
   padding-bottom: 3rem;
-  height: 25vw;
+  min-height: 17rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -17,7 +17,7 @@ const Padder = styled('div')`
   `}
   @media (max-width: 800px) {
     box-shadow: none;
-    height: 3rem;
+    height: 4rem;
   }
 `;
 
