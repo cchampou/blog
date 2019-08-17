@@ -8,6 +8,7 @@ const StyledLink = styled(Link)`
   margin: 0 1rem;
   transition: color 0.25s ease-in-out;
   white-space: nowrap;
+  cursor: pointer;
   
   &:hover {
     color: #35b0ab;
