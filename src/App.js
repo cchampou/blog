@@ -8,16 +8,22 @@ import About from './About';
 import Footer from './footer/Footer';
 
 const globalStyles = css`
-  body, h1, #root {
+  body, h1, h2, h3, h4, h5, h6, #root {
     font-family: sans-serif;
     font-weight: lighter;
     margin: 0;
-    min-height: calc(100vh - 1.5rem);
+  }
+  
+  body, #root {
+    margin: 0;
+    min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
+    width: 100vw;
   }
   
   a {
-    color: black;
+    color: inherit;
     text-decoration: none;
     font-weight: lighter;
   }
