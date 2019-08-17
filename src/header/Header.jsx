@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 
 import NavLink from './Link';
+import MobileLinksWrapper from './MobileLinksWrapper';
 
 const Padder = styled('div')`
   transition: all ease-in-out 0.25s;
@@ -14,10 +15,15 @@ const Padder = styled('div')`
   `:`
     height: 6rem;
   `}
+  @media (max-width: 800px) {
+    box-shadow: none;
+    height: 3rem;
+  }
 `;
 
 const HeaderWrapper = styled('div')`
   position: fixed;
+  z-index: 1000;
   background-color: white;
   width: calc(100% - 8rem);
   height: 3rem;
@@ -35,11 +41,25 @@ const HeaderWrapper = styled('div')`
   `:`
     padding: 1.5rem 4rem;
   `}
+
+  @media (max-width: 800px) {
+    box-shadow: none;
+    width: calc(100% - 2rem);
+    padding: 1rem 1rem;
+    height: 2rem;
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
 `;
 
 const RightLinksWrapper = styled('div')`
   height: 3rem;
   display: flex;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const LangButton = NavLink.withComponent('span');
@@ -73,6 +93,7 @@ const Header = () => {
           <NavLink to="/about">{t('header.about')}</NavLink>
           <LangButton onClick={() => switchLang(t('header.lang'))}>{t('header.lang')}</LangButton>
         </RightLinksWrapper>
+        <MobileLinksWrapper />
       </HeaderWrapper>
     </Padder>
   );
