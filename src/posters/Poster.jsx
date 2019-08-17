@@ -55,13 +55,14 @@ const Poster = ({ title, _id, cover, category }) => {
   const { t } = useTranslation();
   const [image, setImage] = useState('');
   const fetchImage = async () => {
-    const res = await axios.post('https://cockpit.cchampou.me/api/cockpit/image?token=a6755efa6ea9316c6c0a94a9d97053', {
-      src: cover.path,
-      h: 512,
-      w: 512,
-      m: 'bestFit'
+    const res = await axios.get('https://cockpit.cchampou.me/api/cockpit/assets?token=a6755efa6ea9316c6c0a94a9d97053');
+    res.data.assets.map(asset => {
+      console.log(cover._id, asset._id);
+      if (cover._id === asset._id) {
+        setImage(`https://cockpit.cchampou.me/storage/uploads${asset.path}`)
+      }
     });
-    setImage(toHttps(res.data));
+
   };
 
   useEffect(() => {

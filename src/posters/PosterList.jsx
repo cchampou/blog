@@ -16,7 +16,7 @@ const PosterList = () => {
 
   const fetchData = async () => {
     const res = await axios.get('https://cockpit.cchampou.me/api/collections/get/posts?token=a6755efa6ea9316c6c0a94a9d97053');
-    setArticles(res.data.entries);
+    setArticles(res.data.entries.slice(-4));
   };
 
   useEffect(() => {
