@@ -1,6 +1,7 @@
 import DockerPoster from '../src/assets/img/docker.webp';
 import Datacenter from '../src/assets/img/data-center.webp';
 import Reason from '../src/assets/img/reason.webp';
+import Montagnes from '../src/assets/img/montagnes.webp';
 
 export default [
   {
@@ -28,9 +29,9 @@ export default [
     key: 3,
   },
   {
-    title: "Docker",
-    img: Datacenter,
-    category: 'DevOps',
+    title: 'Le SSR, pourquoi, comment ?',
+    img: Montagnes,
+    category: 'Workflow',
     description: "La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[",
     link: '/posts/123',
     key: 4,

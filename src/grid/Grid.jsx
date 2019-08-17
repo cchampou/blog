@@ -12,12 +12,12 @@ const GridColumn = styled('div')`
   flex-direction: column;
   align-items: center;
   @media (max-width: 600px) {
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       visibility: collapse;
     }
   }
   @media (max-width: 800px) {
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       visibility: collapse;
     }
   }

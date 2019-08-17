@@ -10,16 +10,27 @@ const Wrapper = styled('div')`
   background-image: url("${({ background }) => background}");
   background-size: cover;
   background-position: center;
-  flex: 1 0 10rem;
+  flex: 1 0 0;
   margin: 3px;
   padding: 1rem;
   padding-bottom: 3rem;
-  min-height: 17rem;
+  height: 25rem;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   color: white;
+  @media (max-width: 600px) {
+    &:nth-of-type(3) {
+      visibility: collapse;
+    }
+  }
+  @media (max-width: 800px) {
+    &:nth-of-type(4) {
+      visibility: collapse;
+    }
+  }
 `;
 
 const Title = styled('h2')`
@@ -27,6 +38,10 @@ const Title = styled('h2')`
   font-size: 1.8rem;
   margin: 2rem 1rem;
   margin-top: 1rem;
+  @media (max-width: 600px) {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
   text-shadow: 2px 2px 4px black;
 `;
 
