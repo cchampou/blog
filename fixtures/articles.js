@@ -1,6 +1,6 @@
-import DockerPoster from '../src/assets/img/docker.jpg';
-import Datacenter from '../src/assets/img/data-center.jpg';
-import Reason from '../src/assets/img/reason.jpg';
+import DockerPoster from '../src/assets/img/docker.webp';
+import Datacenter from '../src/assets/img/data-center.webp';
+import Reason from '../src/assets/img/reason.webp';
 
 export default [
   {
