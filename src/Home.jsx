@@ -1,5 +1,8 @@
 import React from 'react';
+import PosterList from './posters/PosterList';
 
-const Home = () => null;
+const Home = () => (
+  <PosterList/>
+);
 
 export default Home;

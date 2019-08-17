@@ -4,10 +4,10 @@ import styled from '@emotion/styled';
 const FooterWrapper = styled('div')`
   width: calc(100% - 8rem);
   height: 3rem;
-  padding: 1.5rem 4rem;
+  padding: 0 4rem;
   background-color: #042f4b;
   color: white;
-  bottom: 0rem;
+  bottom: 1.5rem;
   position: absolute;
   margin-bottom: -1.5rem;
   line-height: 3rem;
@@ -20,4 +20,5 @@ const Footer = () => (
   </FooterWrapper>
 );
 
-export default Footer;
+// export default Footer;
+export default () => null;
