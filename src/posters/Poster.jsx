@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 
 const Wrapper = styled('div')`
+  transition: all 1s ease-in-out;
+  background-color: #dddddd;
   background-image: url("${({ background }) => background}");
   background-size: cover;
   background-position: center;
