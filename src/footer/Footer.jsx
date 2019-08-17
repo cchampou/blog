@@ -20,5 +20,4 @@ const Footer = () => (
   </FooterWrapper>
 );
 
-// export default Footer;
-export default () => null;
+export default Footer;

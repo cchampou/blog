@@ -22,6 +22,10 @@ const globalStyles = css`
     width: 100vw;
   }
   
+  #root {
+    padding-bottom: 3rem;
+  }
+  
   a {
     color: inherit;
     text-decoration: none;

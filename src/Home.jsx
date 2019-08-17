@@ -1,8 +1,13 @@
 import React from 'react';
+
 import PosterList from './posters/PosterList';
+import Grid from './grid/Grid';
 
 const Home = () => (
-  <PosterList/>
+  <>
+    <PosterList/>
+    <Grid />
+  </>
 );
 
 export default Home;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-import NavLink from './links/Link';
+import NavLink from './Link';
 
 const Padder = styled('div')`
   transition: all ease-in-out 0.25s;

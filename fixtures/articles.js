@@ -8,6 +8,7 @@ export default [
     img: DockerPoster,
     category: 'DevOps',
     link: '/posts/123',
+    description: "La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[",
     key: 1,
   },
   {
@@ -15,6 +16,7 @@ export default [
     img: Reason,
     category: 'Language',
     link: '/posts/123',
+    description: "La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[",
     key: 2,
   },
   {
@@ -22,12 +24,14 @@ export default [
     img: Datacenter,
     category: 'DevOps',
     link: '/posts/123',
+    description: "La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[",
     key: 3,
   },
   {
     title: "Docker",
     img: Datacenter,
     category: 'DevOps',
+    description: "La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[",
     link: '/posts/123',
     key: 4,
   },
