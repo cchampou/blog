@@ -23,12 +23,12 @@ const Wrapper = styled('div')`
   color: white;
   @media (max-width: 600px) {
     &:nth-of-type(3) {
-      visibility: collapse;
+      display: none;
     }
   }
   @media (max-width: 800px) {
     &:nth-of-type(4) {
-      visibility: collapse;
+      display: none;
     }
   }
 `;
@@ -39,7 +39,7 @@ const Title = styled('h2')`
   margin: 2rem 1rem;
   margin-top: 1rem;
   @media (max-width: 600px) {
-    margin: 0.5rem;
+    margin: 1rem;
     font-size: 1.5rem;
   }
   text-shadow: 2px 2px 4px black;

@@ -13,12 +13,12 @@ const GridColumn = styled('div')`
   align-items: center;
   @media (max-width: 600px) {
     &:nth-of-type(2) {
-      visibility: collapse;
+      display: none;
     }
   }
   @media (max-width: 800px) {
     &:nth-of-type(3) {
-      visibility: collapse;
+      display: none;
     }
   }
 `;
