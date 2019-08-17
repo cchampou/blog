@@ -16,7 +16,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: typeof document !== 'undefined' ? document.documentElement.lang : "fr",
+    lng: "fr",
     // keySeparator: false,
     interpolation: {
       escapeValue: false,

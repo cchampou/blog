@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -47,6 +47,10 @@ const LangButton = NavLink.withComponent('span');
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    setScrolled(window.scrollY > 0);
+  }, []);
 
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', () => {
