@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import { toHttps } from '../utils/http.utils';
 
 import Button from '../button/Button';
 
@@ -60,7 +61,7 @@ const Poster = ({ title, _id, cover, category }) => {
       w: 512,
       m: 'bestFit'
     });
-    setImage(res.data);
+    setImage(toHttps(res.data));
   };
 
   useEffect(() => {
