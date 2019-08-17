@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import i18n from '../i18n';
 
 import NavLink from './Link';
 
@@ -39,13 +42,22 @@ const RightLinksWrapper = styled('div')`
   display: flex;
 `;
 
+const LangButton = NavLink.withComponent('span');
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
+
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', () => {
       setScrolled(window.scrollY > 0);
     });
   }
+
+  const switchLang = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <Padder scrolled={scrolled}>
       <HeaderWrapper scrolled={scrolled}>
@@ -53,8 +65,9 @@ const Header = () => {
           <h1>the Layko project</h1>
         </Link>
         <RightLinksWrapper>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">A propos</NavLink>
+          <NavLink to="/">{t('header.home')}</NavLink>
+          <NavLink to="/about">{t('header.about')}</NavLink>
+          <LangButton onClick={() => switchLang(t('header.lang'))}>{t('header.lang')}</LangButton>
         </RightLinksWrapper>
       </HeaderWrapper>
     </Padder>

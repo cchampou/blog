@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Global, css } from '@emotion/core';
 
+import './i18n';
+
 import Header from './header/Header';
 import Home from './Home';
 import About from './About';

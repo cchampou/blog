@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Button from '../button/Button';
 
@@ -32,12 +33,15 @@ const CategoryLabel = styled('h3')`
   margin: 0;
 `;
 
-const Poster = ({ title, link, img, category }) => (
-  <Wrapper background={img}>
-    <CategoryLabel>{`[ ${category} ]`}</CategoryLabel>
-    <Title>{title}</Title>
-    <Link to={link}><Button>Read More</Button></Link>
-  </Wrapper>
-);
+const Poster = ({ title, link, img, category }) => {
+  const { t } = useTranslation();
+  return (
+    <Wrapper background={img}>
+      <CategoryLabel>{`[ ${category} ]`}</CategoryLabel>
+      <Title>{title}</Title>
+      <Link to={link}><Button>{t('common.readmore')}</Button></Link>
+    </Wrapper>
+  );
+};
 
 export default Poster;
