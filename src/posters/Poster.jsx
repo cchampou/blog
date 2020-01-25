@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { toHttps } from '../utils/http.utils';
 
 import Button from '../button/Button';
 
@@ -49,13 +51,29 @@ const CategoryLabel = styled('h3')`
   margin: 0;
 `;
 
-const Poster = ({ title, link, img, category }) => {
+const Poster = ({ title, _id, cover, category }) => {
   const { t } = useTranslation();
+  const [image, setImage] = useState('');
+  const fetchImage = async () => {
+    const res = await axios.get('https://cockpit.cchampou.me/api/cockpit/assets?token=a6755efa6ea9316c6c0a94a9d97053');
+    res.data.assets.map(asset => {
+      console.log(cover._id, asset._id);
+      if (cover._id === asset._id) {
+        setImage(`https://cockpit.cchampou.me/storage/uploads${asset.path}`)
+      }
+    });
+
+  };
+
+  useEffect(() => {
+    cover && fetchImage();
+  }, [cover]);
+
   return (
-    <Wrapper background={img}>
-      <CategoryLabel>{`[ ${category} ]`}</CategoryLabel>
+    <Wrapper background={image}>
+      <CategoryLabel>{`[ ${category && category.display || ''} ]`}</CategoryLabel>
       <Title>{title}</Title>
-      <Link to={link}><Button>{t('common.readmore')}</Button></Link>
+      <Link to={`/post/${_id}`}><Button>{t('common.readmore')}</Button></Link>
     </Wrapper>
   );
 };

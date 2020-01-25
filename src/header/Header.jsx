@@ -43,7 +43,6 @@ const HeaderWrapper = styled('div')`
   `}
 
   @media (max-width: 800px) {
-    box-shadow: none;
     width: calc(100% - 2rem);
     padding: 1rem 1rem;
     height: 2rem;
